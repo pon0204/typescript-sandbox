@@ -1,4 +1,5 @@
 /**
+ * クラスデコレーターは、コンストラクタの上書きに使用する。
  * Typescriptにおいてデコレーターは関数形式で作成する。
  * e.g. function classDecorator(constructor: Function){・・・}
  * 引数としてコンストラクター関数を受け取る。
