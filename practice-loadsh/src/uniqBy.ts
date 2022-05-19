@@ -39,5 +39,5 @@ console.log(uniqBy<TUser>(array, 'name'))
 //   "name": "佐藤"
 // }]
 
-// 存在しないkeyを使用した場合は型エラーが起きる　。
-// console.log(uniqBy<TUser>(array, 'hoge'))
+// 型に存在しないkeyを使用した場合は型エラーが起きる　。
+// console.log(uniqBy<TUser>(array, 'hoge')) //　エラー
