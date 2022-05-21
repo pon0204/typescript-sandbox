@@ -1,9 +1,7 @@
-import uniqBy from 'loadsh/uniqBy'
+export type TUser = { id: number; name: string }
 
-const array = [
+export const array: TUser[] = [
   { id: 1, name: '伊藤' },
   { id: 2, name: '佐藤' },
   { id: 3, name: '伊藤' },
 ]
-
-uniqBy(array, 'name')

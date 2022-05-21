@@ -12,14 +12,7 @@
  * ]
  */
 
-type TUser = { id: number; name: string }
-const array: TUser[] = [
-  { id: 1, name: '伊藤' },
-  { id: 2, name: '佐藤' },
-  { id: 3, name: '伊藤' },
-]
-
-function uniqBy<T>(array: T[], key: keyof T): T[] {
+export function uniqBy<T>(array: T[], key: keyof T): T[] {
   let results: T[] = []
   let keyValues: T[typeof key][] = []
   for (const obj of array) {
@@ -30,7 +23,6 @@ function uniqBy<T>(array: T[], key: keyof T): T[] {
   return results
 }
 
-console.log(uniqBy<TUser>(array, 'name'))
 // [{
 //   "id": 1,
 //   "name": "伊藤"
