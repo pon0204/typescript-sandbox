@@ -5,10 +5,15 @@
  */
 
 export function uniq<T>(array: T[]): T[] {
-  let results: T[] = []
-  for (const value of array) {
-    if (results.includes(value)) continue
-    results.push(value)
-  }
-  return results
+  return [...new Set(array)]
 }
+
+// 過去の実装
+// export function uniq<T>(array: T[]): T[] {
+//   let results: T[] = []
+//   for (const value of array) {
+//     if (results.includes(value)) continue
+//     results.push(value)
+//   }
+//   return results
+// }
