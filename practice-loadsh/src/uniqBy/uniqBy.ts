@@ -23,7 +23,7 @@ export function uniqBy<T>(array: T[], key: keyof T): T[] {
   return [...map.values()]
 }
 
-// 過去のメモ
+// pushベースの実装
 // export function uniqBy<T>(array: T[], key: keyof T): T[] {
 //   let results: T[] = []
 //   let keyValues: T[typeof key][] = []
