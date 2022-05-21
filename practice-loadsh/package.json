@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "loadsh": "^0.0.4",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@types/lodash": "^4.14.182",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.2",
     "typescript": "^4.6.4"
   }
 }
