@@ -10,6 +10,8 @@
  * {id: 1, name: '伊藤'},
  * {id: 2, name: '佐藤'}
  * ]
+ * 型に存在しないkeyを使用した場合は型エラーが起きる
+ * uniqBy<TUser>(array, 'hoge') //　エラー
  */
 
 export function uniqBy<T>(array: T[], key: keyof T): T[] {
@@ -22,14 +24,3 @@ export function uniqBy<T>(array: T[], key: keyof T): T[] {
   }
   return results
 }
-
-// [{
-//   "id": 1,
-//   "name": "伊藤"
-// }, {
-//   "id": 2,
-//   "name": "佐藤"
-// }]
-
-// 型に存在しないkeyを使用した場合は型エラーが起きる　。
-// console.log(uniqBy<TUser>(array, 'hoge')) //　エラー
