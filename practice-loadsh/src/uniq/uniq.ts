@@ -8,7 +8,7 @@ export function uniq<T>(array: T[]): T[] {
   return [...new Set(array)]
 }
 
-// 過去の実装
+// pushベースの実装
 // export function uniq<T>(array: T[]): T[] {
 //   let results: T[] = []
 //   for (const value of array) {
