@@ -15,12 +15,22 @@
  */
 
 export function uniqBy<T>(array: T[], key: keyof T): T[] {
-  let results: T[] = []
-  let keyValues: T[typeof key][] = []
+  const map = new Map()
   for (const obj of array) {
-    if (keyValues.includes(obj[key])) continue
-    results.push(obj)
-    keyValues.push(obj[key])
+    if (map.has(obj[key])) continue
+    map.set(obj[key], obj)
   }
-  return results
+  return [...map.values()]
 }
+
+// 過去のメモ
+// export function uniqBy<T>(array: T[], key: keyof T): T[] {
+//   let results: T[] = []
+//   let keyValues: T[typeof key][] = []
+//   for (const obj of array) {
+//     if (keyValues.includes(obj[key])) continue
+//     results.push(obj)
+//     keyValues.push(obj[key])
+//   }
+//   return results
+// }
