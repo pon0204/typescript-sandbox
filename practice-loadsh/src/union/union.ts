@@ -1,5 +1,10 @@
 /**
- * 使い方説明
+ * 複数の配列から重複した値を取りのぞいた配列を返す。
+ * union([2], [1, 2]);
+ * => [2, 1]
  */
 
-export function union() {}
+export function union<T>(...arrays: T[][]): T[] {
+  const flatArray: T[] = arrays.flat()
+  return [...new Set(flatArray)]
+}
