@@ -5,6 +5,5 @@
  */
 
 export function union<T>(...arrays: T[][]): T[] {
-  const flatArray: T[] = arrays.flat()
-  return [...new Set(flatArray)]
+  return [...new Set(arrays.flat())]
 }
