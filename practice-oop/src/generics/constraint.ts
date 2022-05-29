@@ -23,3 +23,5 @@ function genericsFn<T extends Parent>(arg: T) {
 genericsFn(new Parent())
 genericsFn(new Child())
 genericsFn(new Other()) // 継承されいないが、nameプロパティを持っているのでエラー起きない。
+
+export {}
