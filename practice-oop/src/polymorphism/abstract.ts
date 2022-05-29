@@ -18,3 +18,5 @@ class Coffee extends Drink {
 const coffee = new Coffee()
 coffee.name = '珈琲'
 coffee.comment() // これはコーヒーです
+
+export {}
