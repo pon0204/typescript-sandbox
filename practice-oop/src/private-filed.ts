@@ -61,3 +61,5 @@ console.log(c.cFormatText()) // name: Child
 // console.log(p.pFormatText()) // name: Parent
 // console.log(c.pFormatText()) // name: Child // nameプロパティがオーバーライドされている
 // console.log(c.cFormatText()) // name: Child
+
+export {}

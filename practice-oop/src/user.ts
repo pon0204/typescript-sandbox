@@ -12,3 +12,5 @@ class User {
 const taro = new User('taro')
 console.log(taro.formatText())
 console.log(taro.name)
+
+export {}
