@@ -1,0 +1,39 @@
+/**
+ * ファサードは、より大きなコード本体に対して簡略化されたAPIを提供するクラス。
+ * サブシステムの低レベルの詳細を隠すために使われることが多い。
+ */
+
+class PlumbingSystem {
+  // low evel access to plubming system
+  setPressure(v: number) {}
+  turnOn() {}
+  turnOff() {}
+}
+
+class ElectricalSystem {
+  // low evel access to electrical system
+  setVoltage(v: number) {}
+  turnOn() {}
+  turnOff() {}
+}
+
+class House {
+  private plumbing = new PlumbingSystem()
+  private electrical = new ElectricalSystem()
+
+  public turnOnSystems() {
+    this.electrical.setVoltage(120)
+    this.electrical.turnOn()
+    this.plumbing.setPressure(500)
+    this.plumbing.turnOn()
+  }
+
+  public shutDown() {
+    this.plumbing.turnOff()
+    this.electrical.turnOff()
+  }
+}
+
+const client = new House()
+client.turnOnSystems()
+client.shutDown()
