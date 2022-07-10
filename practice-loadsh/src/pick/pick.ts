@@ -8,6 +8,7 @@ import { array1 } from '../union/value'
 export function pick(obj: Record<string, any>, keys: string | string[]) {
   const result: Record<string, any> = {}
   for (const key of keys) {
+    if (!(key in obj)) continue
     result[key] = obj[key]
   }
   return result
