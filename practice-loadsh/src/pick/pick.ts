@@ -5,11 +5,10 @@ import { array1 } from '../union/value'
  * pick(obj, ['a', 'c']) => { 'a': 1, 'c': 3 }
  */
 
-export function pick(obj: Record<string, any>, array: string | string[]) {
+export function pick(obj: Record<string, any>, keys: string | string[]) {
   const result: Record<string, any> = {}
-  for (const pickKey of array) {
-    if (!(pickKey in obj)) continue
-    result[pickKey] = obj[pickKey]
+  for (const key of keys) {
+    result[key] = obj[key]
   }
   return result
 }
