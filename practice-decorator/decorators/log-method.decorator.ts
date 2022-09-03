@@ -41,3 +41,5 @@ class Calc {
 }
 
 console.log(new Calc().add(1, 1))
+
+export {}
